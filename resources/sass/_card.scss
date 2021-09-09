@@ -1,0 +1,48 @@
+.item {
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+
+    .itemContent {
+        min-height: 400px;
+        padding: 20px;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+
+        .layer {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;  // WHY DOES THIS EVEN WORK?!
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+        }
+        
+        .itemInfo {
+            display: none;
+        }
+    
+
+        &:hover .layer {
+            display: block;
+        }
+
+        &:hover .itemInfo {
+            display: flex;
+            flex-direction: column;
+            
+            & .titles {
+                margin-bottom: 30px;
+            }
+
+            & .date {
+                margin-bottom: 210px;
+            }
+            
+        }
+    }
+}

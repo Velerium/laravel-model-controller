@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;
+
+700&display=swap);.header {
+  background-color: cyan;
+  text-align: center;
+  padding: 30px;
+}
+
+.header h1 {
+  margin-bottom: 30px;
+}
+
+.item {
+  width: 25%;
+  padding: 10px;
+  text-align: center;
+}
+
+.item .itemContent {
+  min-height: 400px;
+  padding: 20px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.item .itemContent .layer {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.item .itemContent .itemInfo {
+  display: none;
+}
+
+.item .itemContent:hover .layer {
+  display: block;
+}
+
+.item .itemContent:hover .itemInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.item .itemContent:hover .itemInfo .titles {
+  margin-bottom: 30px;
+}
+
+.item .itemContent:hover .itemInfo .date {
+  margin-bottom: 210px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px auto 0;
+  width: 65%;
+  justify-content: center;
+}
+
